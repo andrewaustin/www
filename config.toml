@@ -1,0 +1,33 @@
+baseURL = "http://andrewaustin.com/"
+languageCode = "en-us"
+title = "Andrew Austin"
+author = "Andrew Austin"
+theme = "er"
+copyright = "© 2018 Andrew Austin"
+paginate = 10
+
+[outputs]
+home = ["HTML", "Atom"]
+
+[mediaTypes]
+[mediaTypes."application/atom"]
+suffix = "xml"
+
+[outputFormats.Atom]
+mediaType = "application/atom"
+baseName = "feed"
+isPlainText = false
+
+disableKinds = ['RSS']
+
+[menu]
+  [[menu.main]]
+    identifier = "subscribe"
+    name = "Subscribe"
+    url = "/feed.xml"
+    weight = 10
+
+[params]
+  showTagCloud = false
+  tagline = "Andrew Austin"
+  mainSections = ["article"]
